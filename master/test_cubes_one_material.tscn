@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://test_cubes_one_material.gd" type="Script" id=1]
+
+[node name="TestCubesOneMaterial" type="Node3D"]
+script = ExtResource( 1 )
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+script = null
