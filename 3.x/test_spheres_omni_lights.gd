@@ -14,7 +14,7 @@ func _ready() -> void:
 		mesh_instance.translation = Vector3(-50 + i / 20 * 4, -35 + i % 20 * 4, 50)
 		mesh_instance.rotation = Vector3(TAU / 8, TAU / 8, TAU / 8)
 		mesh_instance.scale = 2.25 * Vector3.ONE
-		mesh_instance.material_override = material
+		mesh_instance.set_surface_material(0, material)
 		add_child(mesh_instance)
 
 		var omni_light := OmniLight.new()

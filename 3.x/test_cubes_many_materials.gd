@@ -13,5 +13,5 @@ func _ready() -> void:
 		mesh_instance.mesh = CubeMesh.new()
 		mesh_instance.translation = Vector3(-300 + i / 50 * 4, -200 + i % 100 * 4, 265)
 		mesh_instance.rotation = Vector3(TAU / 8, TAU / 8, TAU / 8)
-		mesh_instance.material_override = material
+		mesh_instance.set_surface_material(0, material)
 		add_child(mesh_instance)
