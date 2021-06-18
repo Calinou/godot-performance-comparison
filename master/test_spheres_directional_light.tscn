@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://test_spheres_directional_light.gd" type="Script" id=1]
+
+[node name="TestSpheresDirectionalLight" type="Node3D"]
+script = ExtResource( 1 )
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+script = null
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D( 0.258819, -0.683013, -0.683013, 0, -0.707107, 0.707107, -0.965925, -0.183013, -0.183013, 0, 0, 0 )
+shadow_enabled = true
+shadow_bias = 0.005
+directional_shadow_max_distance = 125.0
+script = null

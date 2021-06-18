@@ -53,13 +53,15 @@ All measurements are in milliseconds per frame rendered (16.66 ms ~= 60 FPS).
 
 ### 3D
 
-|                                 Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
-|------------------------------------------:|---------------|---------------|-------------------|
-|         8,000 cubes (1 unshaded material) | 10.20 mspf    | 15.87 mspf    | 6.94 mspf*        |
-|    8,000 cubes (8,000 unshaded materials) | 20.00 mspf    | 20.83 mspf    | 6.94 mspf*        |
-|  200 spheres + 200 shadow-less OmniLights | 10.75 mspf    | 3.04 mspf     | 8.85 mspf         |
+|                                    Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
+|---------------------------------------------:|---------------|---------------|-------------------|
+|            8,000 cubes (1 unshaded material) | 10.20 mspf    | 15.87 mspf    | 6.94 mspf¹        |
+|       8,000 cubes (8,000 unshaded materials) | 20.00 mspf    | 20.83 mspf    | 6.94 mspf¹        |
+|     200 spheres + 200 shadow-less OmniLights | 10.75 mspf    | 3.04 mspf     | 8.85 mspf         |
+|  2,000 spheres + 1 shadowed DirectionalLight | 7.35 mspf     | 7.94 mspf     | 8.62 mspf²        |
 
-*: Limited by V-Sync on a 144 Hz monitor. The effective frame time is likely lower than the one reported here.
+- ¹: Limited by V-Sync on a 144 Hz monitor. The effective frame time is likely lower than the one reported here.
+- ²: Shadow rendering quality is significantly better; it doesn't suffer from acne or peter-panning.
 
 ## License
 
