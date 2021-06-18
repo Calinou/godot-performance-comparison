@@ -39,9 +39,10 @@ figures here may evolve in the future.
 All measurements are in milliseconds per frame rendered (16.66 ms ~= 60 FPS).
 **Lower is better.**
 
-|      Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
-|---------------:|---------------|---------------|-------------------|
-| 10,000 Sprites | 20.41 mspf    | 40.00 mspf    | 23.81 mspf        |
+|         Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
+|------------------:|---------------|---------------|-------------------|
+|    10,000 Sprites | 20.41 mspf    | 40.00 mspf    | 23.81 mspf        |
+| 10,000 Polygon2Ds | 11.63 mspf    | 11.36 mspf    | 7.30 mspf         |
 
 The Vulkan renderer should generally be compared against GLES3 rather than
 GLES2, since it's much more full-featured than GLES2 (and is also significantly
