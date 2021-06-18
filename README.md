@@ -36,22 +36,30 @@ optimizations).
 **Note:** The `master` branch is still in flux, which means the performance
 figures here may evolve in the future.
 
+The Vulkan renderer should generally be compared against GLES3 rather than
+GLES2, since it's much more full-featured than GLES2 (and is also significantly
+more full-featured than GLES3).
+
 All measurements are in milliseconds per frame rendered (16.66 ms ~= 60 FPS).
 **Lower is better.**
+
+### 2D
 
 |                                 Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
 |------------------------------------------:|---------------|---------------|-------------------|
 |                    10,000 256×256 Sprites | 20.41 mspf    | 40.00 mspf    | 23.81 mspf        |
 |                 10,000 4-point Polygon2Ds | 11.63 mspf    | 11.36 mspf    | 7.30 mspf         |
 |            10,000 8-point rounded Line2Ds | 62.50 mspf    | 62.50 mspf    | 8.33 mspf         |
+
+### 3D
+
+|                                 Benchmark | `3.x` (GLES2) | `3.x` (GLES3) | Vulkan (`master`) |
+|------------------------------------------:|---------------|---------------|-------------------|
 |         8,000 cubes (1 unshaded material) | 10.20 mspf    | 15.87 mspf    | 6.94 mspf*        |
 |    8,000 cubes (8,000 unshaded materials) | 20.00 mspf    | 20.83 mspf    | 6.94 mspf*        |
+|  200 spheres + 200 shadow-less OmniLights | 10.75 mspf    | 3.04 mspf     | 8.85 mspf         |
 
 *: Limited by V-Sync on a 144 Hz monitor. The effective frame time is likely lower than the one reported here.
-
-The Vulkan renderer should generally be compared against GLES3 rather than
-GLES2, since it's much more full-featured than GLES2 (and is also significantly
-more full-featured than GLES3).
 
 ## License
 
